@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieON - Main </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oswald:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylee.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" width="25" height="25" style="margin-top: -7.5px; vertical-align: middle;"> movieON
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="toggler-icon">☰</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites <span
+                                style="color: #e54b4b !important">❤</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-sub">Welcome to </p>
+            <h1 class="hero-title">movieON</h1>
+            <p class="hero-desc">discover the best movies</p>
+        </div>
+    </section>
+
+
+    <main class="main-content">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Movies</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div id="moviesGrid" class="movies-grid row g-4">
+            </div>
+
+            <div id="loadingSpinner" class="text-center py-5">
+                <div class="spinner"></div>
+                <p class="mt-3 text-muted">Φόρτωση ταινιών...</p>
+            </div>
+
+            <div id="errorMsg" class="alert-custom" style="display:none;">
+                ⚠ Σφάλμα φόρτωσης ταινιών. Παρακαλώ δοκιμάστε ξανά.
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p class="footer-brand">MovieON</p>
+            <p class="footer-copy">© 2026 — Σχεδίαση και Προγραμματισμός για τον Παγκόσμιο Ιστό</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
